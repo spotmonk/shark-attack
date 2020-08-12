@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import studentShape from '../../helpers/studentShape';
-import LiveStudent from '../LiveStudent/LiveStudent';
+import GraveStone from '../GraveStone/GraveStone';
 
 class Graveyard extends React.Component {
   static propTypes = {
@@ -9,10 +9,10 @@ class Graveyard extends React.Component {
   }
 
   render() {
-    const { students, sharkAttack } = this.props;
+    const { students } = this.props;
 
     const studentCards = students.map((student) => (
-    <LiveStudent sharkAttack={sharkAttack} key={student.id} student={student}/>
+    <GraveStone key={student.id} student={student}/>
     ));
 
     return (
