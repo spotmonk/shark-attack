@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import studentShape from '../../helpers/studentShape';
+import './GraveStone.scss';
 
 class LiveStudent extends React.Component {
   static propTypes = {
@@ -12,10 +13,16 @@ class LiveStudent extends React.Component {
   render() {
     const { student } = this.props;
     return (
-      <div className="card">
-       <div className="card-body">
-         <h5 className="card-title">R.I.P. {student.firstName} {student.lastName}</h5>
-       </div>
+      <div className="gravestone-container m-4">
+      <div className="tombstone">
+      <div className="upperTombstone"></div>
+        <div className="lowerTombstone">
+          <div className="name">
+            <p>{student.firstName} {student.lastName}</p>
+            <p>2020 - 2020</p>
+          </div>
+        </div>
+      </div>
       </div>
     );
   }
